@@ -15,7 +15,7 @@ import static springfox.documentation.builders.PathSelectors.regex;
 
 @Configuration
 @EnableSwagger2
-public class SwaggerConfigurator extends WebMvcConfigurationSupport {
+public class SwaggerConfiguration extends WebMvcConfigurationSupport {
     @Bean
     public Docket taskApi() {
         return new Docket(DocumentationType.SWAGGER_2)
@@ -32,7 +32,7 @@ public class SwaggerConfigurator extends WebMvcConfigurationSupport {
                 .version("1.0.0")
                 .license("Apache License Version 2.0")
                 .licenseUrl("https://www.apache.org/licenses/LICENSE-2.0\"")
-                .contact(new Contact("John Doe", "https://www.vintellus.com", "admin@vintellus.com"))
+                .contact(new Contact("John Doe", "https://www.example.com", "admin@example.com"))
                 .build();
     }
     @Override
